@@ -1,0 +1,214 @@
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations/translations";
+
+const Header = () => {
+    const [isOpen, setIsOpen] = useState(false); // menu mobile
+    const [langOpen, setLangOpen] = useState(false); // dropdown ngôn ngữ
+    const { language, setLanguage } = useLanguage(); // ngôn ngữ từ context
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const scrollToTop = () => {
+        if (location.pathname === "/") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+            navigate("/");
+        }
+    };
+
+    const handleNavClick = (e, href) => {
+        if (location.pathname !== "/") {
+            e.preventDefault();
+            navigate("/");
+            setTimeout(() => {
+                const element = document.querySelector(href);
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 100);
+        }
+    };
+
+    const t = translations[language]; // lấy bản dịch theo ngôn ngữ hiện tại
+
+    const navItems = [
+        { label: t.nav.overview, href: "#tong-quan", isRoute: false },
+        { label: t.nav.schedule, href: "#lich-trinh", isRoute: false },
+        { label: t.nav.participants, href: "#doi-tuong", isRoute: false },
+        { label: t.nav.mainActivities, href: "#hoat-dong-chinh", isRoute: false },
+        { label: t.nav.sideActivities, href: "#hoat-dong-ben-le", isRoute: false },
+        { label: t.nav.contact, href: "/contact", isRoute: true },
+    ];
+
+    const languages = [
+        { code: "VN", label: "Tiếng Việt" },
+        { code: "EN", label: "English" },
+    ];
+
+    return (
+        <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+            <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 md:py-4">
+                {/* Logo */}
+                <div onClick={scrollToTop} className="cursor-pointer">
+                    <img
+                        src="/images/asset-1.png"
+                        alt="CSCV 2025 Logo"
+                        className="h-10 md:h-14 w-auto object-contain"
+                    />
+                </div>
+
+
+                {/* Menu desktop */}
+                <nav className="hidden md:flex gap-6 text-sm font-medium">
+                    {navItems.map((item, i) => (
+                        item.isRoute ? (
+                            <Link
+                                key={i}
+                                to={item.href}
+                                className="hover:text-blue-600 transition-colors"
+                            >
+                                {item.label}
+                            </Link>
+                        ) : (
+                            <a
+                                key={i}
+                                href={item.href}
+                                onClick={(e) => handleNavClick(e, item.href)}
+                                className="hover:text-blue-600 transition-colors"
+                            >
+                                {item.label}
+                            </a>
+                        )
+                    ))}
+                </nav>
+
+                {/* Dropdown ngôn ngữ */}
+                <div className="relative ml-4">
+                    <button
+                        onClick={() => setLangOpen(!langOpen)}
+                        className="px-3 py-1 border rounded text-sm hover:bg-blue-600 hover:text-white transition"
+                    >
+                        {language}
+                    </button>
+
+                    {langOpen && (
+                        <div className="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md">
+                            {languages.map((lang) => (
+                                <button
+                                    key={lang.code}
+                                    onClick={() => {
+                                        setLanguage(lang.code);
+                                        setLangOpen(false);
+                                    }}
+                                    className={`block w-full text-left px-3 py-2 text-sm hover:bg-blue-100 ${
+                                        language === lang.code
+                                            ? "font-semibold text-blue-600"
+                                            : ""
+                                    }`}
+                                >
+                                    {lang.label}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                {/* Nút menu mobile */}
+                <button
+                    className="md:hidden ml-3"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        {isOpen ? (
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        ) : (
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
+                        )}
+                    </svg>
+                </button>
+            </div>
+
+            {/* Menu mobile */}
+            {isOpen && (
+                <div className="md:hidden bg-white border-t shadow-md">
+                    <nav className="flex flex-col p-4 space-y-3">
+                        {navItems.map((item, i) => (
+                            item.isRoute ? (
+                                <Link
+                                    key={i}
+                                    to={item.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="hover:text-blue-600 transition-colors"
+                                >
+                                    {item.label}
+                                </Link>
+                            ) : (
+                                <a
+                                    key={i}
+                                    href={item.href}
+                                    onClick={(e) => {
+                                        handleNavClick(e, item.href);
+                                        setIsOpen(false);
+                                    }}
+                                    className="hover:text-blue-600 transition-colors"
+                                >
+                                    {item.label}
+                                </a>
+                            )
+                        ))}
+
+                        {/* Dropdown ngôn ngữ trong mobile */}
+                        <div className="relative">
+                            <button
+                                onClick={() => setLangOpen(!langOpen)}
+                                className="mt-3 px-3 py-1 border rounded text-sm hover:bg-blue-600 hover:text-white transition"
+                            >
+                                {language}
+                            </button>
+                            {langOpen && (
+                                <div className="absolute left-0 mt-2 w-32 bg-white border rounded shadow-md">
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => {
+                                                setLanguage(lang.code);
+                                                setLangOpen(false);
+                                                setIsOpen(false);
+                                            }}
+                                            className={`block w-full text-left px-3 py-2 text-sm hover:bg-blue-100 ${
+                                                language === lang.code
+                                                    ? "font-semibold text-blue-600"
+                                                    : ""
+                                            }`}
+                                        >
+                                            {lang.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </nav>
+                </div>
+            )}
+        </header>
+    );
+};
+
+export default Header;
