@@ -10,12 +10,29 @@
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
-    color: theme('colors.dark.900');
+    background-color: #000000;
+    color: #ffffff;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-weight: 700;
     line-height: 1.2;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(220, 38, 38, 0.5),
+                 0 0 20px rgba(220, 38, 38, 0.3);
+  }
+  
+  .bg-gradient-dark-red {
+    background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
   }
 }

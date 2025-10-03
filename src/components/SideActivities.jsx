@@ -1,10 +1,12 @@
 import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const SideActivities = () => {
     const { language } = useLanguage();
     const t = translations[language];
+    const [ref, isVisible, animationClass] = useScrollAnimation(0.2, 'scale');
 
     const activities = [
         {
@@ -30,9 +32,9 @@ const SideActivities = () => {
     ];
 
     return (
-        <section id="hoat-dong-ben-le" className="w-full bg-white py-12 px-4">
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+        <section id="hoat-dong-ben-le" className="w-full bg-gradient-to-b from-black via-red-950 to-black py-12 px-4">
+            <div ref={ref} className={`max-w-7xl mx-auto transition-all duration-[800ms] ease-out ${animationClass}`}>
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-red-500 text-glow">
                     {t.sideActivities.title}
                 </h2>
 
@@ -40,7 +42,7 @@ const SideActivities = () => {
                     {activities.map((act) => (
                         <div
                             key={act.id}
-                            className="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden"
+                            className="bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-red-900 hover:border-red-500 hover:scale-105"
                         >
                             {/* Ảnh */}
                             <img
@@ -50,7 +52,7 @@ const SideActivities = () => {
                             />
                             {/* Tiêu đề */}
                             <div className="p-4 text-center">
-                                <h3 className="text-sm md:text-base font-semibold">
+                                <h3 className="text-sm md:text-base font-semibold text-red-400">
                                     {act.id}. {act.title}
                                 </h3>
                             </div>

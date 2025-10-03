@@ -1,10 +1,12 @@
 import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const Participants = () => {
     const { language } = useLanguage();
     const t = translations[language];
+    const [ref, isVisible, animationClass] = useScrollAnimation(0.2, 'right');
 
     const participants = [
         {
@@ -49,26 +51,26 @@ const Participants = () => {
     ];
 
     return (
-        <section id="doi-tuong" className="w-full bg-white py-12 px-4">
-            <div className="max-w-7xl mx-auto space-y-16">
+        <section id="doi-tuong" className="w-full bg-gradient-to-b from-black via-red-950 to-black py-12 px-4">
+            <div ref={ref} className={`max-w-7xl mx-auto space-y-16 transition-all duration-1000 ${animationClass}`}>
                 {/* ĐỐI TƯỢNG THAM DỰ */}
                 <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+                    <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-red-500 text-glow">
                         {t.participants.title}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {participants.map((p, index) => (
                             <div
                                 key={index}
-                                className="bg-gray-50 rounded-xl shadow p-6 text-center"
+                                className="bg-gradient-to-b from-gray-900 to-black rounded-xl shadow-lg p-6 text-center border border-red-900 hover:border-red-500 hover:scale-105 transition-all duration-300"
                             >
                                 <img
                                     src={p.icon}
                                     alt={p.title}
                                     className="h-16 mx-auto mb-4 object-contain"
                                 />
-                                <h3 className="text-lg font-bold mb-2">{p.title}</h3>
-                                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                <h3 className="text-lg font-bold mb-2 text-red-500">{p.title}</h3>
+                                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                                     {p.desc}
                                 </p>
                             </div>

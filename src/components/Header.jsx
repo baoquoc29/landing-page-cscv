@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
@@ -9,6 +9,13 @@ const Header = () => {
     const { language, setLanguage } = useLanguage(); // ngôn ngữ từ context
     const location = useLocation();
     const navigate = useNavigate();
+
+    // Scroll về đầu trang khi vào trang Contact
+    useEffect(() => {
+        if (location.pathname === "/contact") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }, [location.pathname]);
 
     const scrollToTop = () => {
         if (location.pathname === "/") {
@@ -33,6 +40,14 @@ const Header = () => {
 
     const t = translations[language]; // lấy bản dịch theo ngôn ngữ hiện tại
 
+    // Check if nav item is active
+    const isActiveNavItem = (item) => {
+        if (item.isRoute) {
+            return location.pathname === item.href;
+        }
+        return false;
+    };
+
     const navItems = [
         { label: t.nav.overview, href: "#tong-quan", isRoute: false },
         { label: t.nav.schedule, href: "#lich-trinh", isRoute: false },
@@ -48,14 +63,14 @@ const Header = () => {
     ];
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <header className="fixed top-0 left-0 w-full bg-black bg-opacity-95 backdrop-blur-sm border-b border-red-800 shadow-lg z-50">
             <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 md:py-4">
                 {/* Logo */}
                 <div onClick={scrollToTop} className="cursor-pointer">
                     <img
                         src="/images/asset-1.png"
                         alt="CSCV 2025 Logo"
-                        className="h-10 md:h-14 w-auto object-contain"
+                        className="h-10 md:h-14 w-auto object-contain hover:scale-105 transition-transform"
                     />
                 </div>
 
@@ -67,7 +82,11 @@ const Header = () => {
                             <Link
                                 key={i}
                                 to={item.href}
-                                className="hover:text-blue-600 transition-colors"
+                                className={`transition-colors ${
+                                    isActiveNavItem(item)
+                                        ? "text-red-500 font-bold"
+                                        : "text-gray-300 hover:text-red-500"
+                                }`}
                             >
                                 {item.label}
                             </Link>
@@ -76,7 +95,7 @@ const Header = () => {
                                 key={i}
                                 href={item.href}
                                 onClick={(e) => handleNavClick(e, item.href)}
-                                className="hover:text-blue-600 transition-colors"
+                                className="text-gray-300 hover:text-red-500 transition-colors"
                             >
                                 {item.label}
                             </a>
@@ -88,13 +107,13 @@ const Header = () => {
                 <div className="relative ml-4">
                     <button
                         onClick={() => setLangOpen(!langOpen)}
-                        className="px-3 py-1 border rounded text-sm hover:bg-blue-600 hover:text-white transition"
+                        className="px-3 py-1 border border-red-600 rounded text-sm text-gray-300 hover:bg-red-600 hover:text-white transition"
                     >
                         {language}
                     </button>
 
                     {langOpen && (
-                        <div className="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md">
+                        <div className="absolute right-0 mt-2 w-32 bg-gray-900 border border-red-600 rounded shadow-md">
                             {languages.map((lang) => (
                                 <button
                                     key={lang.code}
@@ -102,10 +121,10 @@ const Header = () => {
                                         setLanguage(lang.code);
                                         setLangOpen(false);
                                     }}
-                                    className={`block w-full text-left px-3 py-2 text-sm hover:bg-blue-100 ${
+                                    className={`block w-full text-left px-3 py-2 text-sm hover:bg-red-900 ${
                                         language === lang.code
-                                            ? "font-semibold text-blue-600"
-                                            : ""
+                                            ? "font-semibold text-red-500"
+                                            : "text-gray-300"
                                     }`}
                                 >
                                     {lang.label}
@@ -117,7 +136,7 @@ const Header = () => {
 
                 {/* Nút menu mobile */}
                 <button
-                    className="md:hidden ml-3"
+                    className="md:hidden ml-3 text-gray-300"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <svg
@@ -147,7 +166,7 @@ const Header = () => {
 
             {/* Menu mobile */}
             {isOpen && (
-                <div className="md:hidden bg-white border-t shadow-md">
+                <div className="md:hidden bg-gray-900 border-t border-red-800 shadow-md">
                     <nav className="flex flex-col p-4 space-y-3">
                         {navItems.map((item, i) => (
                             item.isRoute ? (
@@ -155,7 +174,11 @@ const Header = () => {
                                     key={i}
                                     to={item.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="hover:text-blue-600 transition-colors"
+                                    className={`transition-colors ${
+                                        isActiveNavItem(item)
+                                            ? "text-red-500 font-bold"
+                                            : "text-gray-300 hover:text-red-500"
+                                    }`}
                                 >
                                     {item.label}
                                 </Link>
@@ -167,7 +190,7 @@ const Header = () => {
                                         handleNavClick(e, item.href);
                                         setIsOpen(false);
                                     }}
-                                    className="hover:text-blue-600 transition-colors"
+                                    className="text-gray-300 hover:text-red-500 transition-colors"
                                 >
                                     {item.label}
                                 </a>
@@ -178,12 +201,12 @@ const Header = () => {
                         <div className="relative">
                             <button
                                 onClick={() => setLangOpen(!langOpen)}
-                                className="mt-3 px-3 py-1 border rounded text-sm hover:bg-blue-600 hover:text-white transition"
+                                className="mt-3 px-3 py-1 border border-red-600 rounded text-sm text-gray-300 hover:bg-red-600 hover:text-white transition"
                             >
                                 {language}
                             </button>
                             {langOpen && (
-                                <div className="absolute left-0 mt-2 w-32 bg-white border rounded shadow-md">
+                                <div className="absolute left-0 mt-2 w-32 bg-gray-900 border border-red-600 rounded shadow-md">
                                     {languages.map((lang) => (
                                         <button
                                             key={lang.code}
@@ -192,10 +215,10 @@ const Header = () => {
                                                 setLangOpen(false);
                                                 setIsOpen(false);
                                             }}
-                                            className={`block w-full text-left px-3 py-2 text-sm hover:bg-blue-100 ${
+                                            className={`block w-full text-left px-3 py-2 text-sm hover:bg-red-900 ${
                                                 language === lang.code
-                                                    ? "font-semibold text-blue-600"
-                                                    : ""
+                                                    ? "font-semibold text-red-500"
+                                                    : "text-gray-300"
                                             }`}
                                         >
                                             {lang.label}

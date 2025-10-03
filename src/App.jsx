@@ -10,7 +10,7 @@ function App() {
     return (
         <LanguageProvider>
             <Router>
-                <div className="min-h-screen bg-white">
+                <div className="min-h-screen bg-black">
                     <Header />
                     <Routes>
                         <Route path="/" element={<HomePage />} />

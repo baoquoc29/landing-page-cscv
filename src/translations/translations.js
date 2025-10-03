@@ -167,15 +167,15 @@ export const translations = {
         // EventStats
         stats: {
             teams: "PARTICIPATING TEAMS",
-            studentsOffline: "OFFLINE PARTICIPANTS",
+            studentsOffline: "STUDENTS ATTENDING OFFLINE",
             studentsReached: "IT STUDENTS REACHED",
-            views: "VIEWS ON PLATFORMS",
-            mediaArticles: "MEDIA ARTICLES & TV",
+            views: "VIEWS ON DIGITAL PLATFORMS",
+            mediaArticles: "PRESS & MEDIA COVERAGE",
             partners: "PARTNER ORGANIZATIONS"
         },
         // EventIntro
         intro: {
-            title: "LEADING PRESTIGIOUS CYBERSECURITY COMPETITION FOR STUDENTS",
+            title: "THE LEADING PRESTIGIOUS CYBERSECURITY COMPETITION FOR STUDENTS",
             description: "The 2025 Cybersecurity Student Competition is an annual event organized by the National Cybersecurity Association (NCA), sponsored by the Ministry of Public Security and the Ministry of Education and Training, in coordination with the Cybersecurity and High-Tech Crime Prevention Department (A05). The competition is also supported by the Central Committee of the Ho Chi Minh Communist Youth Union and the Vietnam Student Association.",
             objectives: {
                 awareness: {
