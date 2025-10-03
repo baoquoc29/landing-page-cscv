@@ -12,22 +12,22 @@ const SideActivities = () => {
         {
             id: 1,
             title: t.sideActivities.activities[0],
-            img: "/images/hoatdong1.jpg",
+            img: "/images/img0.png",
         },
         {
             id: 2,
             title: t.sideActivities.activities[1],
-            img: "/images/hoatdong2.jpg",
+            img: "/images/img1.jpeg",
         },
         {
             id: 3,
             title: t.sideActivities.activities[2],
-            img: "/images/hoatdong3.jpg",
+            img: "/images/img2.jpg",
         },
         {
             id: 4,
             title: t.sideActivities.activities[3],
-            img: "/images/hoatdong4.jpg",
+            img: "/images/img3.jpeg",
         },
     ];
 

@@ -12,7 +12,7 @@ const Participants = () => {
         {
             title: t.participants.types[0].title,
             desc: t.participants.types[0].desc,
-            icon: "/icons/student.png",
+            icon: "/images/sv.png",
         },
         {
             title: t.participants.types[1].title,

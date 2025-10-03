@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className="flex flex-col space-y-2">
                     <p className="font-bold text-red-500">Mr. DAI TRAN</p>
                     <p>{t.footer.partnership}</p>
-                    <p>M: +84</p>
+                    <p>M: 0344334860</p>
                     <p>Email: <a href="mailto:info@iecgroup.com.vn" className="text-red-500 hover:text-red-400 hover:underline">info@iecgroup.com.vn</a></p>
                     <button className="mt-2 px-4 py-2 bg-red-600 text-white rounded-md shadow-lg hover:bg-red-700 hover:scale-105 transition-all duration-300 w-fit">
                         {t.footer.sponsor}
