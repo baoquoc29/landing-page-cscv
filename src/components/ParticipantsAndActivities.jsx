@@ -17,12 +17,12 @@ const Participants = () => {
         {
             title: t.participants.types[1].title,
             desc: t.participants.types[1].desc,
-            icon: "/icons/company.png",
+            icon: "/images/dn.png",
         },
         {
             title: t.participants.types[2].title,
             desc: t.participants.types[2].desc,
-            icon: "/icons/government.png",
+            icon: "/images/cp.png",
         },
     ];
 
