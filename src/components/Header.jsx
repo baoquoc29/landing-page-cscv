@@ -74,10 +74,9 @@ const Header = () => {
                     />
                 </div>
 
-
                 {/* Menu desktop */}
                 <nav className="hidden md:flex gap-6 text-sm font-medium">
-                    {navItems.map((item, i) => (
+                    {navItems.map((item, i) =>
                         item.isRoute ? (
                             <Link
                                 key={i}
@@ -100,38 +99,57 @@ const Header = () => {
                                 {item.label}
                             </a>
                         )
-                    ))}
+                    )}
                 </nav>
 
-                {/* Dropdown ngôn ngữ */}
-                <div className="relative ml-4">
-                    <button
-                        onClick={() => setLangOpen(!langOpen)}
-                        className="px-3 py-1 border border-red-600 rounded text-sm text-gray-300 hover:bg-red-600 hover:text-white transition"
-                    >
-                        {language}
-                    </button>
+                {/* Khu vực ngôn ngữ + nút đăng ký */}
+                <div className="flex items-center gap-3 ml-4">
+                    {/* Dropdown ngôn ngữ */}
+                    <div className="relative">
+                        <button
+                            onClick={() => setLangOpen(!langOpen)}
+                            className="px-3 py-1 border border-red-600 rounded text-sm text-gray-300 hover:bg-red-600 hover:text-white transition"
+                        >
+                            {language}
+                        </button>
 
-                    {langOpen && (
-                        <div className="absolute right-0 mt-2 w-32 bg-gray-900 border border-red-600 rounded shadow-md">
-                            {languages.map((lang) => (
-                                <button
-                                    key={lang.code}
-                                    onClick={() => {
-                                        setLanguage(lang.code);
-                                        setLangOpen(false);
-                                    }}
-                                    className={`block w-full text-left px-3 py-2 text-sm hover:bg-red-900 ${
-                                        language === lang.code
-                                            ? "font-semibold text-red-500"
-                                            : "text-gray-300"
-                                    }`}
-                                >
-                                    {lang.label}
-                                </button>
-                            ))}
-                        </div>
-                    )}
+                        {langOpen && (
+                            <div className="absolute right-0 mt-2 w-32 bg-gray-900 border border-red-600 rounded shadow-md">
+                                {languages.map((lang) => (
+                                    <button
+                                        key={lang.code}
+                                        onClick={() => {
+                                            setLanguage(lang.code);
+                                            setLangOpen(false);
+                                        }}
+                                        className={`block w-full text-left px-3 py-2 text-sm hover:bg-red-900 ${
+                                            language === lang.code
+                                                ? "font-semibold text-red-500"
+                                                : "text-gray-300"
+                                        }`}
+                                    >
+                                        {lang.label}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Nút đăng ký tham gia (desktop) */}
+                    <Link
+                        to="/register"
+                        className="px-5 py-2.5
+             bg-gradient-to-r from-red-600 via-red-500 to-red-700
+             text-white text-sm font-semibold rounded-xl
+             shadow-xl shadow-red-600/70
+             transition-all duration-300
+             hover:scale-110 hover:shadow-red-400/90
+             animate-glow"
+                    >
+                        {t.registerButton}
+                    </Link>
+
+
                 </div>
 
                 {/* Nút menu mobile */}
@@ -168,7 +186,7 @@ const Header = () => {
             {isOpen && (
                 <div className="md:hidden bg-gray-900 border-t border-red-800 shadow-md">
                     <nav className="flex flex-col p-4 space-y-3">
-                        {navItems.map((item, i) => (
+                        {navItems.map((item, i) =>
                             item.isRoute ? (
                                 <Link
                                     key={i}
@@ -195,7 +213,7 @@ const Header = () => {
                                     {item.label}
                                 </a>
                             )
-                        ))}
+                        )}
 
                         {/* Dropdown ngôn ngữ trong mobile */}
                         <div className="relative">
@@ -227,6 +245,20 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
+
+                        {/* Nút đăng ký tham gia (mobile) */}
+                        <Link
+                            to="/register"
+                            className="px-5 py-2.5 bg-gradient-to-r from-red-600 via-red-500 to-red-700
+               text-white text-sm font-semibold rounded-xl
+               shadow-xl shadow-red-500/50
+               transform transition-all duration-300
+               hover:scale-110 hover:shadow-red-400/70
+               animate-pulse"
+                        >
+                            {t.registerButton}
+                        </Link>
+
                     </nav>
                 </div>
             )}

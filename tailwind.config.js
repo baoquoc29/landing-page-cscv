@@ -69,11 +69,12 @@ export default {
         }
       },
       fontFamily: {
-        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+        'sans': ['SVN-Aguda Regular', 'ui-sans-serif', 'system-ui'],
         'serif': ['ui-serif', 'Georgia'],
         'mono': ['ui-monospace', 'SFMono-Regular'],
-        'display': ['BT Suave', 'Inter', 'ui-sans-serif'],
-        'body': ['Inter', 'ui-sans-serif', 'system-ui'],
+        'display': ['SVN-Gilroy Bold', 'ui-sans-serif'],
+        'body': ['SVN-Aguda Regular', 'ui-sans-serif', 'system-ui'],
+        'heading': ['SVN-Gilroy Bold', 'ui-sans-serif'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],

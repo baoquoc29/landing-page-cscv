@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f94ecd6-d754-43cd-9fb3-9a07ca0447ee" name="Changes" comment="Landing page">
-      <change afterPath="$PROJECT_DIR$/public/images/banner1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/banner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/SVN-Aguda Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/SVN-Gilroy Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/RegistrationForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EventBanner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EventBanner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CSCV/landing-page-cscv/public/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CSCV/landing-page-cscv/public/fonts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -74,6 +78,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CSCV\landing-page-cscv\public\fonts" />
       <recent name="D:\CSCV\landing-page-cscv\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -125,7 +130,8 @@
       <workItem from="1759482548294" duration="156000" />
       <workItem from="1759484594609" duration="867000" />
       <workItem from="1759496277004" duration="700000" />
-      <workItem from="1759542723170" duration="1515000" />
+      <workItem from="1759542723170" duration="4243000" />
+      <workItem from="1759554529206" duration="1550000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <option name="closed" value="true" />
@@ -151,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759496380137</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Landing page">
+      <option name="closed" value="true" />
+      <created>1759544496669</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759544496669</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

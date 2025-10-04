@@ -2,20 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import custom fonts */
+@font-face {
+  font-family: 'SVN-Gilroy Bold';
+  src: url('/fonts/SVN-Gilroy Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Aguda Regular';
+  src: url('/fonts/SVN-Aguda Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'SVN-Aguda Regular', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     background-color: #000000;
     color: #ffffff;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'SVN-Gilroy Bold', system-ui, -apple-system, sans-serif;
     font-weight: 700;
     line-height: 1.2;
     color: #ffffff;

@@ -9,6 +9,7 @@ export const translations = {
             sideActivities: "HOẠT ĐỘNG BÊN LỀ",
             contact: "THÔNG TIN LIÊN HỆ"
         },
+        registerButton: "Đăng ký",
         // EventBanner
         banner: {
             title: "BANER SỰ KIỆN",
@@ -146,6 +147,34 @@ export const translations = {
                 content: "Nội dung",
                 submit: "Gửi thông tin"
             }
+        },
+        // Registration Form
+        registration: {
+            title: "MẪU ĐĂNG KÝ",
+            subtitle: "Vui lòng điền đầy đủ thông tin, các mục có dấu (*) là bắt buộc.",
+            form: {
+                prefix: "Danh xưng",
+                prefixPlaceholder: "Ông / Bà",
+                fullName: "Họ và Tên",
+                fullNamePlaceholder: "Nguyễn Văn A",
+                mobile: "Số điện thoại",
+                mobilePlaceholder: "090xxxxxxx",
+                email: "Địa chỉ Email",
+                emailPlaceholder: "example@email.com",
+                organization: "Tên tổ chức - Doanh nghiệp - Đại học",
+                organizationPlaceholder: "Công ty / Đại học",
+                jobTitle: "Chức vụ",
+                jobTitlePlaceholder: "Quản lý / Sinh viên",
+                department: "Phòng - Ban - Khoa - Viện",
+                departmentPlaceholder: "Khoa Công nghệ thông tin",
+                website: "Website tổ chức",
+                websitePlaceholder: "https://example.com",
+                industry: "Lĩnh vực hoạt động",
+                industryPlaceholder: "Giáo dục / Công nghệ",
+                consent: "Bằng cách đánh dấu, bạn đồng ý cung cấp thông tin cho BTC và nhận thông tin về sự kiện cũng như các hoạt động liên quan.",
+                submit: "Gửi đăng ký",
+                required: "*"
+            }
         }
     },
     EN: {
@@ -158,6 +187,7 @@ export const translations = {
             sideActivities: "SIDE ACTIVITIES",
             contact: "CONTACT INFORMATION"
         },
+        registerButton: "Register",
         // EventBanner
         banner: {
             title: "EVENT BANNER",
@@ -294,6 +324,34 @@ export const translations = {
                 email: "Email Address",
                 content: "Message",
                 submit: "Send Information"
+            }
+        },
+        // Registration Form
+        registration: {
+            title: "REGISTRATION FORM",
+            subtitle: "Please complete this form. All fields marked with (*) are required.",
+            form: {
+                prefix: "Prefix",
+                prefixPlaceholder: "Mr. / Ms.",
+                fullName: "Full Name",
+                fullNamePlaceholder: "John Doe",
+                mobile: "Mobile",
+                mobilePlaceholder: "090xxxxxxx",
+                email: "Email Address",
+                emailPlaceholder: "example@email.com",
+                organization: "Organization - University Name",
+                organizationPlaceholder: "Company / University",
+                jobTitle: "Job Title",
+                jobTitlePlaceholder: "Manager / Student",
+                department: "Department",
+                departmentPlaceholder: "IT Department",
+                website: "Organization Website",
+                websitePlaceholder: "https://example.com",
+                industry: "Industry",
+                industryPlaceholder: "Education / Technology",
+                consent: "By ticking this box, you agree to allow the Organizer to hold and store your contact information and to receive information about the event and related activities.",
+                submit: "Submit",
+                required: "*"
             }
         }
     }
