@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
+import { useActiveSection } from "../hooks/useActiveSection";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false); // menu mobile
@@ -9,6 +10,12 @@ const Header = () => {
     const { language, setLanguage } = useLanguage(); // ngôn ngữ từ context
     const location = useLocation();
     const navigate = useNavigate();
+
+    // Danh sách các section IDs để theo dõi
+    const sectionIds = ['tong-quan', 'lich-trinh', 'doi-tuong', 'hoat-dong-chinh', 'hoat-dong-ben-le'];
+    
+    // Sử dụng hook để theo dõi section nào đang active
+    const activeSection = useActiveSection(sectionIds);
 
     // Scroll về đầu trang khi vào trang Contact
     useEffect(() => {
@@ -44,6 +51,11 @@ const Header = () => {
     const isActiveNavItem = (item) => {
         if (item.isRoute) {
             return location.pathname === item.href;
+        }
+        // Với các section trong HomePage, check theo activeSection
+        if (location.pathname === "/" && item.href.startsWith('#')) {
+            const sectionId = item.href.substring(1); // Bỏ ký tự #
+            return activeSection === sectionId;
         }
         return false;
     };
@@ -94,7 +106,11 @@ const Header = () => {
                                 key={i}
                                 href={item.href}
                                 onClick={(e) => handleNavClick(e, item.href)}
-                                className="text-gray-300 hover:text-red-500 transition-colors"
+                                className={`transition-colors ${
+                                    isActiveNavItem(item)
+                                        ? "text-red-500 font-bold"
+                                        : "text-gray-300 hover:text-red-500"
+                                }`}
                             >
                                 {item.label}
                             </a>
@@ -208,7 +224,11 @@ const Header = () => {
                                         handleNavClick(e, item.href);
                                         setIsOpen(false);
                                     }}
-                                    className="text-gray-300 hover:text-red-500 transition-colors"
+                                    className={`transition-colors ${
+                                        isActiveNavItem(item)
+                                            ? "text-red-500 font-bold"
+                                            : "text-gray-300 hover:text-red-500"
+                                    }`}
                                 >
                                     {item.label}
                                 </a>
