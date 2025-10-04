@@ -8,7 +8,7 @@ const EventBanner = () => {
 
     return (
         <section
-            className="w-full min-h-screen mt-4 bg-center bg-contain bg-no-repeat bg-black relative flex flex-col items-center justify-center text-center px-4"
+            className="w-full min-h-screen mt-8 bg-center bg-contain bg-no-repeat bg-black relative flex flex-col items-center justify-center text-center px-4"
             style={{backgroundImage: "url('/images/banner2.png')"}}
         >
 
