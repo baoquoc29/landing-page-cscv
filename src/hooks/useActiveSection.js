@@ -10,39 +10,61 @@ export const useActiveSection = (sectionIds) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Lấy vị trí scroll hiện tại
-            const scrollPosition = window.scrollY + 100; // offset 100px để trigger sớm hơn
+            // Lấy chiều cao của header (fixed header)
+            const headerOffset = 80; // Điều chỉnh theo chiều cao header của bạn
+            
+            // Lấy vị trí scroll hiện tại + offset header
+            const scrollPosition = window.scrollY + headerOffset + 50;
 
-            // Tìm section đang visible
+            // Nếu ở gần đầu trang (trong vòng 150px), luôn active section đầu tiên
+            if (window.scrollY < 150) {
+                setActiveSection(sectionIds[0]);
+                return;
+            }
+
+            // Nếu ở cuối trang, active section cuối cùng
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+                setActiveSection(sectionIds[sectionIds.length - 1]);
+                return;
+            }
+
+            // Tìm section đang visible (duyệt từ cuối lên đầu)
             for (let i = sectionIds.length - 1; i >= 0; i--) {
                 const section = document.getElementById(sectionIds[i]);
                 if (section) {
                     const sectionTop = section.offsetTop;
-                    const sectionBottom = sectionTop + section.offsetHeight;
-
-                    // Nếu scroll position nằm trong khoảng của section này
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    
+                    // Nếu scroll position đã qua section này
+                    if (scrollPosition >= sectionTop) {
                         setActiveSection(sectionIds[i]);
                         break;
                     }
                 }
-            }
-
-            // Nếu ở đầu trang, set section đầu tiên là active
-            if (window.scrollY < 200) {
-                setActiveSection(sectionIds[0]);
             }
         };
 
         // Gọi ngay khi mount để set active section ban đầu
         handleScroll();
 
-        // Lắng nghe sự kiện scroll
-        window.addEventListener('scroll', handleScroll);
+        // Lắng nghe sự kiện scroll với throttle để tối ưu performance
+        let timeoutId = null;
+        const throttledHandleScroll = () => {
+            if (timeoutId === null) {
+                timeoutId = setTimeout(() => {
+                    handleScroll();
+                    timeoutId = null;
+                }, 50); // Chỉ check mỗi 50ms
+            }
+        };
+
+        window.addEventListener('scroll', throttledHandleScroll);
 
         // Cleanup
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', throttledHandleScroll);
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
         };
     }, [sectionIds]);
 

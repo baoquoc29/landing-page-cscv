@@ -22,6 +22,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Để sections không bị che bởi fixed header */
   }
   
   body {
@@ -51,6 +52,29 @@
   
   .border-glow {
     box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+  }
+  
+  /* Active navigation item style */
+  .nav-active {
+    position: relative;
+    color: #ef4444;
+    font-weight: 700;
+  }
+  
+  .nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ef4444, transparent);
+    animation: nav-glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes nav-glow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
   }
 }
 @keyframes box-glow {

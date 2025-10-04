@@ -93,9 +93,9 @@ const Header = () => {
                             <Link
                                 key={i}
                                 to={item.href}
-                                className={`transition-colors ${
+                                className={`transition-all duration-300 relative ${
                                     isActiveNavItem(item)
-                                        ? "text-red-500 font-bold"
+                                        ? "nav-active"
                                         : "text-gray-300 hover:text-red-500"
                                 }`}
                             >
@@ -106,9 +106,9 @@ const Header = () => {
                                 key={i}
                                 href={item.href}
                                 onClick={(e) => handleNavClick(e, item.href)}
-                                className={`transition-colors ${
+                                className={`transition-all duration-300 relative ${
                                     isActiveNavItem(item)
-                                        ? "text-red-500 font-bold"
+                                        ? "nav-active"
                                         : "text-gray-300 hover:text-red-500"
                                 }`}
                             >
