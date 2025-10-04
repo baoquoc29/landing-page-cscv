@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f94ecd6-d754-43cd-9fb3-9a07ca0447ee" name="Changes" comment="Landing page" />
+    <list default="true" id="1f94ecd6-d754-43cd-9fb3-9a07ca0447ee" name="Changes" comment="Landing page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +149,7 @@
       <workItem from="1759484594609" duration="867000" />
       <workItem from="1759496277004" duration="700000" />
       <workItem from="1759542723170" duration="4243000" />
-      <workItem from="1759554529206" duration="2330000" />
+      <workItem from="1759554529206" duration="2694000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <option name="closed" value="true" />
@@ -196,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759556645013</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Landing page">
+      <option name="closed" value="true" />
+      <created>1759557105379</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759557105379</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

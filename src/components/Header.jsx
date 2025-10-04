@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
 
@@ -247,17 +247,17 @@ const Header = () => {
                         </div>
 
                         {/* Nút đăng ký tham gia (mobile) */}
-                        <button
-                            onClick={() => window.location.href = '/register'}
+                        <Link
+                            to="/register"
                             className="px-5 py-2.5 bg-gradient-to-r from-red-600 via-red-500 to-red-700
                text-white text-sm font-semibold rounded-xl
                shadow-xl shadow-red-500/50
                transform transition-all duration-300
                hover:scale-110 hover:shadow-red-400/70
-               animate-pulse w-full"
+               animate-pulse"
                         >
                             {t.registerButton}
-                        </button>
+                        </Link>
 
                     </nav>
                 </div>
