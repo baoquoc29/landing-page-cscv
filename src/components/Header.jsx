@@ -234,51 +234,6 @@ const Header = () => {
                                 </a>
                             )
                         )}
-
-                        {/* Dropdown ngôn ngữ trong mobile */}
-                        <div className="relative">
-                            <button
-                                onClick={() => setLangOpen(!langOpen)}
-                                className="mt-3 px-3 py-1 border border-red-600 rounded text-sm text-gray-300 hover:bg-red-600 hover:text-white transition"
-                            >
-                                {language}
-                            </button>
-                            {langOpen && (
-                                <div className="absolute left-0 mt-2 w-32 bg-gray-900 border border-red-600 rounded shadow-md">
-                                    {languages.map((lang) => (
-                                        <button
-                                            key={lang.code}
-                                            onClick={() => {
-                                                setLanguage(lang.code);
-                                                setLangOpen(false);
-                                                setIsOpen(false);
-                                            }}
-                                            className={`block w-full text-left px-3 py-2 text-sm hover:bg-red-900 ${
-                                                language === lang.code
-                                                    ? "font-semibold text-red-500"
-                                                    : "text-gray-300"
-                                            }`}
-                                        >
-                                            {lang.label}
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-
-                        {/* Nút đăng ký tham gia (mobile) */}
-                        <Link
-                            to="/register"
-                            className="px-5 py-2.5 bg-gradient-to-r from-red-600 via-red-500 to-red-700
-               text-white text-sm font-semibold rounded-xl
-               shadow-xl shadow-red-500/50
-               transform transition-all duration-300
-               hover:scale-110 hover:shadow-red-400/70
-               animate-pulse"
-                        >
-                            {t.registerButton}
-                        </Link>
-
                     </nav>
                 </div>
             )}
