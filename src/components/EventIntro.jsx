@@ -24,22 +24,18 @@ const EventIntro = () => {
                         <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4 text-justify">
                             {t.intro.description}
                         </p>
-                        <ul className="list-disc list-inside text-gray-300 text-sm md:text-base space-y-2">
+                        <ul className="list-disc list-inside text-gray-300 text-sm md:text-base space-y-2 text-justify">
                             <li>
-                                <strong
-                                    className="text-red-500">{t.intro.objectives.awareness.title}</strong> {t.intro.objectives.awareness.description}
+                                <strong className="text-red-500">{t.intro.objectives.awareness.title}</strong> {t.intro.objectives.awareness.description}
                             </li>
                             <li>
-                                <strong
-                                    className="text-red-500">{t.intro.objectives.skills.title}</strong> {t.intro.objectives.skills.description}
+                                <strong className="text-red-500">{t.intro.objectives.skills.title}</strong> {t.intro.objectives.skills.description}
                             </li>
                             <li>
-                                <strong
-                                    className="text-red-500">{t.intro.objectives.talent.title}</strong> {t.intro.objectives.talent.description}
+                                <strong className="text-red-500">{t.intro.objectives.talent.title}</strong> {t.intro.objectives.talent.description}
                             </li>
                             <li>
-                                <strong
-                                    className="text-red-500">{t.intro.objectives.ecosystem.title}</strong> {t.intro.objectives.ecosystem.description}
+                                <strong className="text-red-500">{t.intro.objectives.ecosystem.title}</strong> {t.intro.objectives.ecosystem.description}
                             </li>
                         </ul>
                     </div>
@@ -52,8 +48,6 @@ const EventIntro = () => {
                             className="w-full max-h-[480px] object-contain rounded-lg shadow-lg scale-150"
                         />
                     </div>
-
-
                 </div>
             </div>
         </section>

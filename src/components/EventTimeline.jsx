@@ -38,9 +38,12 @@ const EventTimeline = () => {
     return (
         <section id="lich-trinh" className="w-full bg-gradient-to-b from-black via-red-950 to-black py-12 px-4">
             <div ref={ref} className={`max-w-7xl mx-auto transition-all duration-1000 ${animationClass}`}>
+                {/* Tiêu đề */}
                 <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-red-500 text-glow">
                     {t.timeline.title}
                 </h2>
+
+                {/* Timeline cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {timeline.map((item, index) => (
                         <div
@@ -52,12 +55,17 @@ const EventTimeline = () => {
                                 backgroundPosition: "center",
                             }}
                         >
-                            {/* Overlay đen mờ */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-red-950/40 to-black/80"></div>
+                            {/* Overlay đậm hơn */}
+                            <div className="absolute inset-0">
+                                {/* lớp đen mờ đậm hơn */}
+                                <div className="absolute inset-0 bg-black/60"></div>
+                                {/* lớp đỏ gradient thêm chiều sâu */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/30 to-black/80"></div>
+                            </div>
 
                             {/* Nội dung */}
                             <div className="relative z-10">
-                                <h3 className="text-lg md:text-xl font-extrabold mb-2 text-red-400">
+                                <h3 className="text-lg md:text-xl font-extrabold mb-2 text-red-400 drop-shadow-lg">
                                     {item.title}
                                 </h3>
                                 <p className="font-semibold mb-2 text-red-300">{item.date}</p>

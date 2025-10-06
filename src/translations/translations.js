@@ -119,12 +119,13 @@ export const translations = {
         },
         // Side Activities
         sideActivities: {
-            title: "HOẠT ĐỘNG BÊN LỀ",
+            title: " HOẠT ĐỘNG SONG SONG",
+            subTitle: "Các hoạt động diễn ra song song với Vòng Chung Khảo ngày 15.11.2025",
             activities: [
-                "Tọa đàm hướng nghiệp",
-                "Đặt bàn truyền thông",
-                "Hội chợ việc làm & đào tạo",
-                "Mini game công nghệ"
+                "TỌA ĐÀM HƯỚNG NGHIỆP",
+                "ĐẶT BÀN TRUYỀN THÔNG",
+                "HỘI CHỢ VIỆC LÀM & ĐÀO TẠO",
+                "MINI GAME CÔNG NGHỆ"
             ]
         },
         // Footer
@@ -298,11 +299,12 @@ export const translations = {
         // Side Activities
         sideActivities: {
             title: "SIDE ACTIVITIES",
+            subTitle: "Activities taking place alongside the Final Round on 15.11.2025",
             activities: [
-                "Career guidance talk",
-                "Media booth",
-                "Job fair & training",
-                "Tech mini games"
+                "CAREER ORIENTATION TALKSHOW",
+                "MEDIA BOOTH",
+                "JOB & TRAINING FAIR",
+                "TECHNOLOGY MINI GAMES"
             ]
         },
         // Footer

@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f94ecd6-d754-43cd-9fb3-9a07ca0447ee" name="Changes" comment="Landing page">
-      <change afterPath="$PROJECT_DIR$/public/images/3img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EventIntro.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EventIntro.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EventTimeline.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EventTimeline.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainActivities.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainActivities.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SideActivities.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideActivities.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/translations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/translations.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,26 +56,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.ContactSection.jsx.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/CSCV/landing-page-cscv/public/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.preview.executor": "Run",
-    "ts.external.directory.path": "D:\\CSCV\\landing-page-cscv\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.ContactSection.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CSCV/landing-page-cscv/public/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.preview.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\CSCV\\landing-page-cscv\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CSCV\landing-page-cscv\public\images" />
@@ -152,7 +155,8 @@
       <workItem from="1759542723170" duration="4243000" />
       <workItem from="1759554529206" duration="4926000" />
       <workItem from="1759646135288" duration="758000" />
-      <workItem from="1759679354854" duration="615000" />
+      <workItem from="1759679354854" duration="1349000" />
+      <workItem from="1759712627170" duration="743000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <option name="closed" value="true" />
@@ -258,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759646452098</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Landing page">
+      <option name="closed" value="true" />
+      <created>1759680116417</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1759680116417</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

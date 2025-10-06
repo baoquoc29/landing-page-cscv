@@ -10,6 +10,11 @@ const SideActivities = () => {
 
     const activities = [
         {
+            id: 0,
+            title: "HỘI THẢO CÔNG NGHỆ",
+            img: "/images/img_new.png", // đổi thành ảnh thật
+        },
+        {
             id: 1,
             title: t.sideActivities.activities[0],
             img: "/images/img0.png",
@@ -32,13 +37,30 @@ const SideActivities = () => {
     ];
 
     return (
-        <section id="hoat-dong-ben-le" className="w-full bg-gradient-to-b from-black via-red-950 to-black py-12 px-4">
-            <div ref={ref} className={`max-w-7xl mx-auto transition-all duration-[800ms] ease-out ${animationClass}`}>
-                <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-red-500 text-glow">
+        <section
+            id="hoat-dong-ben-le"
+            className="w-full bg-gradient-to-b from-black via-red-950 to-black py-12 px-4"
+        >
+            <div
+                ref={ref}
+                className={`max-w-7xl mx-auto transition-all duration-[800ms] ease-out ${animationClass}`}
+            >
+                {/* Tiêu đề */}
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-red-500 text-glow">
                     {t.sideActivities.title}
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Dòng text nhỏ */}
+                <p
+                    className={`text-center italic text-red-300 text-sm mb-10 transition-opacity duration-700 ${
+                        isVisible ? "opacity-100" : "opacity-0"
+                    }`}
+                >
+                    {t.sideActivities.subTitle}
+                </p>
+
+                {/* Danh sách hoạt động */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(5,minmax(0,1fr))] gap-6">
                     {activities.map((act) => (
                         <div
                             key={act.id}
@@ -50,10 +72,10 @@ const SideActivities = () => {
                                 alt={act.title}
                                 className="w-full h-48 object-cover"
                             />
-                            {/* Tiêu đề */}
+                            {/* Tiêu đề hoạt động */}
                             <div className="p-4 text-center">
                                 <h3 className="text-sm md:text-base font-semibold text-red-400">
-                                    {act.id}. {act.title}
+                                     {act.title}
                                 </h3>
                             </div>
                         </div>

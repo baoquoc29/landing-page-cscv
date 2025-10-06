@@ -61,7 +61,7 @@ const MainActivities = () => {
                                     {a.title}
                                 </h3>
                                 <p className="font-semibold mb-3 text-red-400">{a.date}</p>
-                                <p className="text-gray-300 text-sm md:text-base whitespace-pre-line leading-relaxed">
+                                <p className="text-gray-300 text-sm md:text-base whitespace-pre-line leading-relaxed text-justify">
                                     {a.desc}
                                 </p>
                             </div>
