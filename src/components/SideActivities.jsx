@@ -12,7 +12,7 @@ const SideActivities = () => {
         {
             id: 0,
             title: "HỘI THẢO CÔNG NGHỆ",
-            img: "/images/img_new.png", // đổi thành ảnh thật
+            img: "/images/ht.jpg", // đổi thành ảnh thật
         },
         {
             id: 1,
