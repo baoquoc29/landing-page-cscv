@@ -5,19 +5,15 @@ import { translations } from "../translations/translations";
 import { useActiveSection } from "../hooks/useActiveSection";
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false); // menu mobile
-    const [langOpen, setLangOpen] = useState(false); // dropdown ngôn ngữ
-    const { language, setLanguage } = useLanguage(); // ngôn ngữ từ context
+    const [isOpen, setIsOpen] = useState(false);
+    const [langOpen, setLangOpen] = useState(false);
+    const { language, setLanguage } = useLanguage();
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Danh sách các section IDs để theo dõi
     const sectionIds = ['tong-quan', 'lich-trinh', 'doi-tuong', 'hoat-dong-chinh', 'hoat-dong-ben-le'];
-    
-    // Sử dụng hook để theo dõi section nào đang active
     const activeSection = useActiveSection(sectionIds);
 
-    // Scroll về đầu trang khi vào trang Contact
     useEffect(() => {
         if (location.pathname === "/contact") {
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -45,16 +41,12 @@ const Header = () => {
         }
     };
 
-    const t = translations[language]; // lấy bản dịch theo ngôn ngữ hiện tại
+    const t = translations[language];
 
-    // Check if nav item is active
     const isActiveNavItem = (item) => {
-        if (item.isRoute) {
-            return location.pathname === item.href;
-        }
-        // Với các section trong HomePage, check theo activeSection
+        if (item.isRoute) return location.pathname === item.href;
         if (location.pathname === "/" && item.href.startsWith('#')) {
-            const sectionId = item.href.substring(1); // Bỏ ký tự #
+            const sectionId = item.href.substring(1);
             return activeSection === sectionId;
         }
         return false;
@@ -75,16 +67,17 @@ const Header = () => {
     ];
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-black bg-opacity-95 backdrop-blur-sm border-b border-red-800 shadow-lg z-50">
-            <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 md:py-4">
-                {/* Logo */}
-                <div onClick={scrollToTop} className="cursor-pointer">
+        <header className="fixed top-0 left-0 w-full h-20 md:h-24 bg-black bg-opacity-95 backdrop-blur-sm border-b border-red-800 shadow-lg z-50">
+            <div className="max-w-7xl mx-auto flex justify-between items-center px-4 h-full">
+                <div onClick={scrollToTop} className="cursor-pointer flex mt-4 items-center">
                     <img
-                        src="/images/asset-1.png"
+                        src="/images/logo.png"
                         alt="CSCV 2025 Logo"
-                        className="h-10 md:h-14 w-auto object-contain hover:scale-105 transition-transform"
+                        className="h-14 md:h-20 w-auto object-contain scale-[2] transition-transform"
                     />
+
                 </div>
+
 
                 {/* Menu desktop */}
                 <nav className="hidden md:flex gap-6 text-sm font-medium">
@@ -130,7 +123,8 @@ const Header = () => {
                         </button>
 
                         {langOpen && (
-                            <div className="absolute right-0 mt-2 w-32 bg-gray-900 border border-red-600 rounded shadow-md">
+                            <div
+                                className="absolute right-0 mt-2 w-32 bg-gray-900 border border-red-600 rounded shadow-md">
                                 {languages.map((lang) => (
                                     <button
                                         key={lang.code}
@@ -151,21 +145,18 @@ const Header = () => {
                         )}
                     </div>
 
-                    {/* Nút đăng ký tham gia (desktop) */}
+                    {/* Nút đăng ký */}
                     <button
                         onClick={() => window.location.href = '/register'}
-                        className="px-5 py-2.5
-             bg-gradient-to-r from-red-600 via-red-500 to-red-700
-             text-white text-sm font-semibold rounded-xl
-             shadow-xl shadow-red-600/70
-             transition-all duration-300
-             hover:scale-110 hover:shadow-red-400/90
-             animate-glow"
+                        className="px-5 py-2.5 bg-gradient-to-r from-red-600 via-red-500 to-red-700
+                                   text-white text-sm font-semibold rounded-xl
+                                   shadow-xl shadow-red-600/70
+                                   transition-all duration-300
+                                   hover:scale-110 hover:shadow-red-400/90
+                                   animate-glow"
                     >
                         {t.registerButton}
                     </button>
-
-
                 </div>
 
                 {/* Nút menu mobile */}
@@ -180,19 +171,11 @@ const Header = () => {
                         viewBox="0 0 24 24"
                     >
                         {isOpen ? (
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M6 18L18 6M6 6l12 12"
-                            />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                  d="M6 18L18 6M6 6l12 12"/>
                         ) : (
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                  d="M4 6h16M4 12h16M4 18h16"/>
                         )}
                     </svg>
                 </button>
