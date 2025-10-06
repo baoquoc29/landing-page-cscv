@@ -12,7 +12,7 @@ const SideActivities = () => {
         {
             id: 0,
             title: "HỘI THẢO CÔNG NGHỆ",
-            img: "/images/ht.jpg", // đổi thành ảnh thật
+            img: "/images/ht.jpg",
         },
         {
             id: 1,
@@ -74,10 +74,11 @@ const SideActivities = () => {
                             />
                             {/* Tiêu đề hoạt động */}
                             <div className="p-4 text-center">
-                                <h3 className="text-sm md:text-base font-semibold text-red-400">
-                                     {act.title}
+                                <h3 className="text-xs md:text-sm font-semibold text-red-400">
+                                    {act.title}
                                 </h3>
                             </div>
+
                         </div>
                     ))}
                 </div>
