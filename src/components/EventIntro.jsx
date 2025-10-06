@@ -38,6 +38,37 @@ const EventIntro = () => {
                                 <strong className="text-red-500">{t.intro.objectives.ecosystem.title}</strong> {t.intro.objectives.ecosystem.description}
                             </li>
                         </ul>
+
+                        {/* Venue Information */}
+                        <div className="mt-6 bg-gradient-to-r from-red-900/40 via-red-800/50 to-red-900/40 border-2 border-red-500 rounded-xl p-5 shadow-xl backdrop-blur-sm">
+                            <h3 className="text-lg md:text-xl font-bold mb-3 text-red-400 text-glow">
+                                {t.intro.venue.title}
+                            </h3>
+                            <div className="space-y-2 text-gray-200">
+                                <div className="flex items-start gap-2">
+                                    <div className="flex-shrink-0 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <p className="text-xs md:text-sm leading-relaxed">
+                                        <strong className="font-bold text-red-500">{t.intro.venue.mainLabel}</strong> {t.intro.venue.mainContent}
+                                    </p>
+                                </div>
+                                <div className="flex items-start gap-2">
+                                    <div className="flex-shrink-0 mt-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <p className="text-xs md:text-sm leading-relaxed">
+                                        <strong className="font-bold text-red-500">{t.intro.venue.sideLabel}</strong> {t.intro.venue.sideContent}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Right: Ảnh */}

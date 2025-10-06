@@ -43,8 +43,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base md:text-lg">
                     <div>
                         <h3 className="font-bold mb-2 text-red-500 uppercase">{t.footer.organizers}</h3>
-                        <p className="font-semibold">Hiệp hội An ninh mạng quốc gia</p>
-                        <p>38 Phan Đình Phùng, Quán Thánh, Ba Đình, Hà Nội</p>
+                        <p className="font-semibold">{t.footer.ncaName}</p>
+                        <p>{t.footer.ncaAddress}</p>
                         <p>024 626 00 626</p>
                         <p>
                             <a href="mailto:info@nca.org.vn"
@@ -64,28 +64,27 @@ const Footer = () => {
                         </p>
                     </div>
                     <div>
-                        <h3 className="font-bold mb-2 text-red-500">IEC Consulting</h3>
-                        <p>66 Trần Đại Nghĩa, Đồng Tâm, Hai Bà Trưng, Hà Nội</p>
-                        <p>0344334880</p>
+                        <h3 className="font-bold mb-2 text-red-500">
+                            {t.footer.contactTitle}
+                        </h3>
                         <p>
+                            Email:{" "}
                             <a
-                                href="mailto:info@iecconsulting.com.vn"
+                                href="mailto:bantochuc@cscv.vn"
                                 className="text-red-500 hover:text-red-400 hover:underline"
                             >
-                                info@iecconsulting.com.vn
-                            </a>
-                        </p>
-                        <p>
+                                bantochuc@cscv.vn
+                            </a>{" "}
+                            {t.footer.or}{" "}
                             <a
-                                href="https://iecconsulting.com.vn"
-                                target="_blank"
-                                rel="noreferrer"
+                                href="mailto:contact@cscv.vn"
                                 className="text-red-500 hover:text-red-400 hover:underline"
                             >
-                                iecconsulting.com.vn
+                                contact@cscv.vn
                             </a>
                         </p>
                     </div>
+
                 </div>
             </div>
         </footer>

@@ -46,6 +46,13 @@ export const translations = {
                     title: "Kết nối hệ sinh thái:",
                     description: "Liên kết giáo dục – doanh nghiệp – quốc gia, góp phần phát triển nhân lực chất lượng cao."
                 }
+            },
+            venue: {
+                title: "VÒNG CHUNG KHẢO VÀ TRAO GIẢI NGÀY 15.11.2025",
+                mainLabel: "Cuộc thi chính:",
+                mainContent: "Đấu trường, Trụ trở Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao, Bộ Công an.",
+                sideLabel: "Các hoạt động song song và chương trình tường thuật trực tiếp cuộc thi:",
+                sideContent: "Cung Thiếu nhi Thành phố Cơ sở 2, đường Phạm Hùng, phường Cầu Giấy, Thành phố Hà Nội."
             }
         },
         // EventTimeline
@@ -72,7 +79,11 @@ export const translations = {
                     date: "(15/11/2025)",
                     desc: "20 – 30 đội chia làm 02 bảng thi đấu, thi đấu trực tiếp tại Hà Nội và trao giải. Các hoạt động cổ vũ, tương tác, hướng nghiệp, hội thảo bên lề diễn ra song song"
                 }
-            ]
+            ],
+            buttons: {
+                overview: "TỔNG QUAN CUỘC THI",
+                agenda: "CHƯƠNG TRÌNH CHI TIẾT"
+            }
         },
         // Participants
         participants: {
@@ -133,7 +144,11 @@ export const translations = {
             sponsor: "Tài trợ / For Sponsor",
             organizers: "ĐƠN VỊ TỔ CHỨC",
             partnership: "Phụ trách Quảng cáo, truyền thông",
-            sendEmail: "Gửi Email"
+            sendEmail: "Gửi Email",
+            ncaName: "Hiệp hội An ninh mạng quốc gia",
+            ncaAddress: "38 Phan Đình Phùng, Quán Thánh, Ba Đình, Hà Nội",
+            contactTitle: "LIÊN HỆ BAN TỔ CHỨC CUỘC THI SINH VIÊN AN NINH MẠNG 2025",
+            or: "hoặc"
         },
         // Contact Section
         contact: {
@@ -226,6 +241,13 @@ export const translations = {
                     title: "Connect Ecosystem:",
                     description: "Link education – business – nation, contributing to high-quality human resource development."
                 }
+            },
+            venue: {
+                title: "FINAL ROUND AND AWARD CEREMONY ON NOVEMBER 15, 2025",
+                mainLabel: "Main Competition:",
+                mainContent: "Arena, Headquarters of the Cybersecurity and High-Tech Crime Prevention Department, Ministry of Public Security.",
+                sideLabel: "Side activities and live broadcast program:",
+                sideContent: "Hanoi Children's Palace Facility 2, Pham Hung Street, Cau Giay Ward, Hanoi City."
             }
         },
         // EventTimeline
@@ -252,7 +274,11 @@ export const translations = {
                     date: "(15/11/2025)",
                     desc: "20-30 teams divided into 2 competition groups, competing directly in Hanoi and awards ceremony. Support activities, interactions, career guidance, and seminars take place simultaneously"
                 }
-            ]
+            ],
+            buttons: {
+                overview: "COMPETITION OVERVIEW",
+                agenda: "DETAILED AGENDA"
+            }
         },
         // Participants
         participants: {
@@ -313,7 +339,11 @@ export const translations = {
             sponsor: "Sponsor",
             organizers: "ORGANIZERS",
             partnership: "Advertising & Communications Manager",
-            sendEmail: "Send Email"
+            sendEmail: "Send Email",
+            ncaName: "National Cybersecurity Association",
+            ncaAddress: "38 Phan Dinh Phung, Quan Thanh, Ba Dinh, Hanoi",
+            contactTitle: "CONTACT THE ORGANIZING COMMITTEE OF THE 2025 CYBERSECURITY STUDENT COMPETITION",
+            or: "or"
         },
         // Contact Section
         contact: {
