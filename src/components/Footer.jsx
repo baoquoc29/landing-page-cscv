@@ -22,28 +22,27 @@ const Footer = () => {
 
                 {/* Contact */}
                 <div className="flex flex-col space-y-3 text-base md:text-lg">
-                    <p className="font-bold text-red-500">Mr. DAI TRAN</p>
-                    <p>{t.footer.partnership}</p>
-                    <p>M: 0344334860</p>
-                    <p>
-                        Email:{" "}
-                        <a
-                            href="mailto:info@iecgroup.com.vn"
-                            className="text-red-500 hover:text-red-400 hover:underline"
-                        >
-                            info@iecgroup.com.vn
-                        </a>
+                    <p className="font-bold text-red-500">
+                        {language === 'VN' ? 'Ông Trần Viết Đại' : 'Mr. Tran Viet Dai'}
                     </p>
-                    <button
-                        className="mt-2 px-4 py-2 bg-red-600 text-white rounded-md shadow-lg hover:bg-red-700 hover:scale-105 transition-all duration-300 w-fit">
+                    <p>{t.footer.partnership}</p>
+                    <p>
+                        {language === 'VN' ? 'Điện thoại: ' : 'Phone: '}
+                        034 433 4860
+                    </p>
+                    <a
+                        href="mailto:dai.tran@iecgroup.com.vn?subject=Hợp%20tác%20Tài%20trợ&body=Chào%20anh%20Đại,%0A%0ATôi%20quan%20tâm%20tài%20trợ..."
+                        className="mt-2 inline-block px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-md shadow-lg hover:from-red-700 hover:to-red-800 hover:scale-105 transition-all duration-300 w-fit"
+                    >
                         {t.footer.sponsor}
-                    </button>
+                    </a>
+
                 </div>
 
                 {/* Organizers */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base md:text-lg">
                     <div>
-                        <h3 className="font-bold mb-2 text-red-500">{t.footer.organizers}</h3>
+                        <h3 className="font-bold mb-2 text-red-500 uppercase">{t.footer.organizers}</h3>
                         <p className="font-semibold">Hiệp hội An ninh mạng quốc gia</p>
                         <p>38 Phan Đình Phùng, Quán Thánh, Ba Đình, Hà Nội</p>
                         <p>024 626 00 626</p>

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f94ecd6-d754-43cd-9fb3-9a07ca0447ee" name="Changes" comment="Landing page">
-      <change beforePath="$PROJECT_DIR$/src/components/SideActivities.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideActivities.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/translations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/translations.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +153,7 @@
       <workItem from="1759554529206" duration="4926000" />
       <workItem from="1759646135288" duration="758000" />
       <workItem from="1759679354854" duration="1349000" />
-      <workItem from="1759712627170" duration="3102000" />
+      <workItem from="1759712627170" duration="4805000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <option name="closed" value="true" />
@@ -297,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759715619417</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Landing page">
+      <option name="closed" value="true" />
+      <created>1759715785778</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1759715785778</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -131,8 +131,9 @@ export const translations = {
         // Footer
         footer: {
             sponsor: "Tài trợ / For Sponsor",
-            organizers: "ORGANIZERS",
-            partnership: "Partnership Dept."
+            organizers: "ĐƠN VỊ TỔ CHỨC",
+            partnership: "Phụ trách Quảng cáo, truyền thông",
+            sendEmail: "Gửi Email"
         },
         // Contact Section
         contact: {
@@ -311,7 +312,8 @@ export const translations = {
         footer: {
             sponsor: "Sponsor",
             organizers: "ORGANIZERS",
-            partnership: "Partnership Dept."
+            partnership: "Advertising & Communications Manager",
+            sendEmail: "Send Email"
         },
         // Contact Section
         contact: {
