@@ -109,6 +109,7 @@ export default {
         'scale-in': 'scaleIn 0.5s ease-out',
         'bounce-in': 'bounceIn 0.6s ease-out',
         'glow': 'glow 2s ease-in-out infinite',
+        'spin-slow': 'spin 3s linear infinite reverse',
       },
       keyframes: {
         fadeIn: {

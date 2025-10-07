@@ -110,21 +110,14 @@ export const translations = {
                 {
                     title: "VÒNG SƠ KHẢO",
                     date: "(18/10/2025)",
-                    desc: `- Quy mô: 200 đội
-- Hình thức: Thi online
-- Thử thách theo chủ đề (jeopardy), gồm: Pwnable (Khai thác lỗi phần mềm, buffer overflow, format string, shellcode …); 
-- Reverse engineering: tập trung vào kỹ năng dịch ngược mã nguồn phần mềm, cách unpack các packer, crypter bảo vệ phần mềm; 
-- Web: Các kỹ thuật tấn công vào ứng dụng Web; 
-- Crypto/ACM: Đánh đố giải mã, tấn công các thuật toán mã hóa, dùng kỹ năng lập trình/giải thuật để giải các trò chơi, mê cung ...`
+                    desc: `Với quy mô 200 đội, Vòng Sơ khảo được tổ chức dưới hình thức thi online, theo mô hình "jeopardy" với nhiều thử thách đa dạng. Các đội sẽ lần lượt chinh phục các mảng chính: Pwnable (khai thác lỗi phần mềm như buffer overflow, format string, shellcode...), Reverse Engineering (dịch ngược, unpack, giải mã cơ chế bảo vệ phần mềm), Web (tấn công và khai thác lỗ hổng ứng dụng web) và Crypto/ACM (giải mã, tấn công thuật toán mã hóa, lập trình và giải thuật),...`
                 },
                 {
                     title: "VÒNG CHUNG KHẢO",
                     date: "(15/11/2025)",
-                    desc: `- Quy mô: 30 – 40 đội (Chọn từ Sơ khảo)
-- Hình thức: Thi online và offline
-- Chia thành 2 bảng thi:
-  • Bảng A: Thi tấn công – phòng thủ trực tiếp (attack-defense) vào Trung tâm dữ liệu giả lập. Thi tập trung tại Hà Nội, các đội thi đấu nước ngoài kết nối thi online.
-  • Bảng B: Thi Jeopardy: tất cả các đội thi online từ xa.`
+                    desc: `Vòng Chung Khảo chia thành hai bảng:
+Bảng A: Thi đấu tấn công - phòng thủ (attack-defense) trên trung tâm dữ liệu giả lập, với các đội trong nước tập trung tại Hà Nội, còn các đội quốc tế sẽ kết nối thi trực tuyến.
+Bảng B: Thi theo hình thức jeopardy, trong đó tất cả các đội thi online từ xa. Vòng Chung Khảo là nơi các đội thể hiện bản lĩnh, tư duy chiến lược và kỹ năng xử lý tình huống trong môi trường an ninh mạng thực tế.`
                 }
             ]
         },
@@ -305,21 +298,14 @@ export const translations = {
                 {
                     title: "PRELIMINARY ROUND",
                     date: "(18/10/2025)",
-                    desc: `- Scale: 200 teams
-- Format: Online competition
-- Jeopardy-style challenges including: Pwnable (Software vulnerability exploitation, buffer overflow, format string, shellcode, etc.); 
-- Reverse engineering: focusing on software source code reverse engineering skills, unpacking packers and crypters protecting software; 
-- Web: Attack techniques on Web applications; 
-- Crypto/ACM: Cryptography puzzles, cryptographic algorithm attacks, using programming/algorithm skills to solve games and mazes...`
+                    desc: `With a scale of 200 teams, the Preliminary Round is organized in an online format, following the "jeopardy" model with diverse challenges. Teams will conquer various main categories: Pwnable (software vulnerability exploitation such as buffer overflow, format string, shellcode...), Reverse Engineering (reverse engineering, unpacking, decoding software protection mechanisms), Web (attacking and exploiting web application vulnerabilities), and Crypto/ACM (decryption, attacking encryption algorithms, programming and algorithms),...`
                 },
                 {
                     title: "FINAL ROUND",
                     date: "(15/11/2025)",
-                    desc: `- Scale: 30-40 teams (Selected from Preliminary Round)
-- Format: Online and offline competition
-- Divided into 2 competition groups:
-  • Group A: Attack-defense competition directly on simulated data center. Competition centralized in Hanoi, foreign teams connect online.
-  • Group B: Jeopardy competition: all teams compete online remotely.`
+                    desc: `The Final Round is divided into two groups:
+Group A: Attack-defense competition on a simulated data center, with domestic teams centralized in Hanoi, while international teams will connect and compete online.
+Group B: Jeopardy-style competition, where all teams compete online remotely. The Final Round is where teams demonstrate their resilience, strategic thinking, and incident handling skills in real-world cybersecurity environments.`
                 }
             ]
         },
