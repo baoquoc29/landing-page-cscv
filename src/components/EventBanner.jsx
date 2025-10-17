@@ -7,20 +7,27 @@ const EventBanner = () => {
     const t = translations[language];
 
     // Chọn banner dựa trên ngôn ngữ
-    const bannerImage = language === 'EN' ? '/images/Keyvisual.FN-03.png' : '/images/banner2.png';
+    const bannerImage =
+        language === "EN" ? "/images/Banner.png" : "/images/Banner.png";
+    const bannerVertical =
+        language === "EN" ? "/images/banner_vertical_en.jpg" : "/images/banner_vertical.jpg";
 
     return (
-        <section
-            className="w-full min-h-screen mt-8 bg-center bg-contain bg-no-repeat bg-black relative flex flex-col items-center justify-center text-center px-4"
-            style={{backgroundImage: `url('${bannerImage}')`}}
-        >
-            {/* Nội dung */}
+        <section className="relative w-full min-h-screen mt-18 bg-black flex flex-col items-center justify-center text-center px-4">
+            <div
+                className="hidden md:block absolute inset-0 bg-center bg-contain bg-no-repeat"
+                style={{ backgroundImage: `url('${bannerImage}')` }}
+            ></div>
+
+            <div
+                className="block md:hidden mt-8 absolute inset-0 bg-center bg-cover bg-no-repeat"
+                style={{ backgroundImage: `url('${bannerVertical}')` }}
+            ></div>
+
             <div className="relative z-10 max-w-4xl mx-auto">
-                {/* Buttons với animation */}
                 <div className="flex flex-col md:flex-row gap-4 justify-center animate-slide-in-up">
                 </div>
             </div>
-
         </section>
     );
 };

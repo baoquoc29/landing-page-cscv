@@ -44,33 +44,33 @@ const RegistrationForm = () => {
         const newErrors = {};
         
         if (!formData.title.trim()) {
-            newErrors.title = language === "vi" ? "Danh xưng không được để trống" : "Title is required";
+            newErrors.title = language === "VN" ? "Danh xưng không được để trống" : "Title is required";
         }
         if (!formData.fullName.trim()) {
-            newErrors.fullName = language === "vi" ? "Họ và tên không được để trống" : "Full name is required";
+            newErrors.fullName = language === "VN" ? "Họ và tên không được để trống" : "Full name is required";
         }
         if (!formData.phone.trim()) {
-            newErrors.phone = language === "vi" ? "Số điện thoại không được để trống" : "Phone number is required";
+            newErrors.phone = language === "VN" ? "Số điện thoại không được để trống" : "Phone number is required";
         }
         if (!formData.email.trim()) {
-            newErrors.email = language === "vi" ? "Email không được để trống" : "Email is required";
+            newErrors.email = language === "VN" ? "Email không được để trống" : "Email is required";
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = language === "vi" ? "Email không hợp lệ" : "Invalid email format";
+            newErrors.email = language === "VN" ? "Email không hợp lệ" : "Invalid email format";
         }
         if (!formData.organization.trim()) {
-            newErrors.organization = language === "vi" ? "Tên tổ chức không được để trống" : "Organization is required";
+            newErrors.organization = language === "VN" ? "Tên tổ chức không được để trống" : "Organization is required";
         }
         if (!formData.position.trim()) {
-            newErrors.position = language === "vi" ? "Chức vụ không được để trống" : "Position is required";
+            newErrors.position = language === "VN" ? "Chức vụ không được để trống" : "Position is required";
         }
         if (!formData.department.trim()) {
-            newErrors.department = language === "vi" ? "Phòng ban không được để trống" : "Department is required";
+            newErrors.department = language === "VN" ? "Phòng ban không được để trống" : "Department is required";
         }
         if (!formData.fieldOfActivity.trim()) {
-            newErrors.fieldOfActivity = language === "vi" ? "Lĩnh vực hoạt động không được để trống" : "Field of activity is required";
+            newErrors.fieldOfActivity = language === "VN" ? "Lĩnh vực hoạt động không được để trống" : "Field of activity is required";
         }
         if (!formData.consent) {
-            newErrors.consent = language === "vi" ? "Vui lòng đồng ý với điều khoản" : "Please agree to the terms";
+            newErrors.consent = language === "VN" ? "Vui lòng đồng ý với điều khoản" : "Please agree to the terms";
         }
 
         setErrors(newErrors);
@@ -84,9 +84,11 @@ const RegistrationForm = () => {
 
         // Validate form
         if (!validateForm()) {
+            // Lấy ngôn ngữ hiện tại để hiển thị message phù hợp
+            const currentLanguage = language;
             setMessage({ 
                 type: "error", 
-                text: language === "vi" 
+                text: currentLanguage === "VN" 
                     ? "Vui lòng điền đầy đủ thông tin bắt buộc" 
                     : "Please fill in all required fields" 
             });
@@ -96,7 +98,7 @@ const RegistrationForm = () => {
         setIsLoading(true);
 
         try {
-            const apiUrl = import.meta.env.VITE_API_URL;
+            const apiUrl = import.meta.env.VITE_API_URL + "/api/registrations";
             
             if (!apiUrl) {
                 throw new Error("API URL is not configured");
@@ -133,10 +135,10 @@ const RegistrationForm = () => {
 
             const data = await response.json();
 
-            // Success
+            // Success - So sánh với "VN" thay vì "vi"
             setMessage({ 
                 type: "success", 
-                text: language === "vi" 
+                text: language === "VN" 
                     ? "Đăng ký thành công! Email xác nhận đã được gửi đến hộp thư của bạn." 
                     : "Registration successful! A confirmation email has been sent to your inbox." 
             });
@@ -160,9 +162,11 @@ const RegistrationForm = () => {
 
         } catch (error) {
             console.error("Registration error:", error);
+            // Lấy ngôn ngữ hiện tại để hiển thị message phù hợp
+            const currentLanguage = language;
             setMessage({ 
                 type: "error", 
-                text: language === "vi" 
+                text: currentLanguage === "VN" 
                     ? `Đăng ký thất bại: ${error.message}. Vui lòng thử lại sau.` 
                     : `Registration failed: ${error.message}. Please try again later.` 
             });
@@ -403,7 +407,7 @@ const RegistrationForm = () => {
                             }`}
                         >
                             {isLoading 
-                                ? (language === "vi" ? "Đang gửi..." : "Submitting...") 
+                                ? (language === "VN" ? "Đang gửi..." : "Submitting...") 
                                 : t.registration.form.submit
                             }
                         </button>

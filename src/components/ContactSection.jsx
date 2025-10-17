@@ -1,12 +1,10 @@
 import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
-const SERVICE_ID = "service_7c62rwa";
-const TEMPLATE_ID = "template_1o4k47j";
-const PUBLIC_KEY = "iRtuUK5yqKPzJtjTT";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+const CONTACT_API_URL = `${API_BASE_URL}/api/contact`;
 
 const ContactSection = () => {
     const { language } = useLanguage();
@@ -25,11 +23,50 @@ const ContactSection = () => {
         setNotice(null);
 
         try {
-            await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
-            setNotice({ type: "success", message: "✅ Gửi thông tin thành công. Chúng tôi sẽ liên hệ sớm nhất!" });
-            formRef.current.reset();
+            // Lấy dữ liệu từ form
+            const formData = new FormData(formRef.current);
+            
+            // Tạo request body theo ContactInfoRequest DTO
+            const requestBody = {
+                fullName: formData.get("user_name"),
+                position: formData.get("user_position"),
+                organization: formData.get("user_org"),
+                phoneNumber: formData.get("user_phone"),
+                email: formData.get("user_email"),
+                message: formData.get("message")
+            };
+
+            // Gọi API
+            const response = await fetch(CONTACT_API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(requestBody)
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                // Hiển thị thông báo thành công từ API
+                setNotice({ 
+                    type: "success", 
+                    message: `✅ ${result.message || "Gửi thông tin thành công. Chúng tôi sẽ liên hệ sớm nhất!"}` 
+                });
+                formRef.current.reset();
+            } else {
+                // Hiển thị thông báo lỗi từ API
+                setNotice({ 
+                    type: "error", 
+                    message: `❌ ${result.message || "Gửi thất bại. Vui lòng thử lại sau!"}` 
+                });
+            }
         } catch (err) {
-            setNotice({ type: "error", message: "❌ Gửi thất bại. Vui lòng thử lại sau!" });
+            console.error("Lỗi khi gửi thông tin liên hệ:", err);
+            setNotice({ 
+                type: "error", 
+                message: "❌ Không thể kết nối đến máy chủ. Vui lòng thử lại sau!" 
+            });
         } finally {
             setSubmitting(false);
         }

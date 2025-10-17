@@ -74,15 +74,15 @@ const Header = () => {
                         src="/images/logo.png"
                         alt="CSCV 2025 Logo"
                         className="
-      h-12     /* mobile nhỏ */
-      sm:h-14  /* mobile lớn */
-      md:h-20  /* tablet */
-      lg:h-24  /* laptop */
-      xl:h-28  /* màn hình lớn */
-      w-auto object-contain transition-transform
-      scale-150
-    "
+    h-[130px]           /* mobile nhỏ (mặc định) */
+    sm:h-24        /* mobile lớn */
+    md:h-28        /* tablet */
+    lg:h-32        /* laptop */
+    xl:h-36        /* màn hình lớn */
+    w-auto object-contain transition-transform
+  "
                     />
+
                 </div>
 
 

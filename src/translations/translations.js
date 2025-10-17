@@ -28,7 +28,8 @@ export const translations = {
         // EventIntro
         intro: {
             title: "CUỘC THI UY TÍN HÀNG ĐẦU VỀ AN NINH MẠNG CHO SINH VIÊN",
-            description: "Cuộc thi Sinh viên An ninh mạng năm 2025 là sự kiện thường niên do Hiệp hội An ninh mạng quốc gia (NCA) chủ trì, với sự bảo trợ của Bộ Công an và Bộ Giáo dục và Đào tạo, phối hợp tổ chức cùng Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05), bên cạnh đó, cuộc thi có sự phối hợp, đồng hành của Trung ương Đoàn TNCS Hồ Chí Minh và Hội Sinh viên Việt Nam.",
+            description1: "Cuộc thi Sinh viên An ninh mạng năm 2025 là sự kiện thường niên do Hiệp hội An ninh mạng quốc gia (NCA) chủ trì, với sự bảo trợ của Bộ Công an và Bộ Giáo dục và Đào tạo, phối hợp tổ chức cùng Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05). Bên cạnh đó, chương trình còn nhận được sự phối hợp, đồng hành của Hội Sinh viên Việt Nam.",
+            description2: "Cuộc thi hướng tới mục tiêu nâng cao nhận thức về an toàn thông tin, lan tỏa kiến thức bảo mật dữ liệu và xây dựng văn hóa an ninh mạng trong cộng đồng sinh viên. Đồng thời, chương trình tạo điều kiện để rèn luyện kỹ năng, giúp các thí sinh được trải nghiệm thực chiến, phát triển tư duy phản biện và khả năng sáng tạo. Thông qua đó, cuộc thi góp phần phát hiện và nuôi dưỡng nhân tài, tìm kiếm những gương mặt trẻ tiềm năng cho thế hệ chuyên gia an ninh mạng tương lai. Không chỉ dừng lại ở đó, sự kiện còn đóng vai trò kết nối hệ sinh thái giữa giáo dục, doanh nghiệp và quốc gia, góp phần phát triển nguồn nhân lực an ninh mạng chất lượng cao, đáp ứng nhu cầu ngày càng lớn của thời đại số.",
             objectives: {
                 awareness: {
                     title: "Nâng cao nhận thức:",
@@ -50,7 +51,7 @@ export const translations = {
             venue: {
                 title: "VÒNG CHUNG KHẢO VÀ TRAO GIẢI NGÀY 15.11.2025",
                 mainLabel: "Cuộc thi chính:",
-                mainContent: "Đấu trường, Trụ trở Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao, Bộ Công an.",
+                mainContent: "Đấu trường, Trụ sở Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao, Bộ Công an.",
                 sideLabel: "Các hoạt động song song và chương trình tường thuật trực tiếp cuộc thi:",
                 sideContent: "Cung Thiếu nhi Thành phố Cơ sở 2, đường Phạm Hùng, phường Cầu Giấy, Thành phố Hà Nội."
             }
@@ -77,7 +78,8 @@ export const translations = {
                 {
                     title: "CHUNG KHẢO",
                     date: "(15/11/2025)",
-                    desc: "20 – 30 đội chia làm 02 bảng thi đấu, thi đấu trực tiếp tại Hà Nội và trao giải. Các hoạt động cổ vũ, tương tác, hướng nghiệp, hội thảo bên lề diễn ra song song"
+                    desc: "Chia làm 02 bảng thi đấu, thi đấu trực tiếp tại Hà Nội và trao giải\n" +
+                        "Các hoạt động cổ vũ, tương tác, hướng nghiệp, hội thảo bên lề diễn ra song song"
                 }
             ],
             buttons: {
@@ -99,7 +101,7 @@ export const translations = {
                 },
                 {
                     title: "CƠ QUAN QUẢN LÝ NHÀ NƯỚC",
-                    desc: "Cuộc thi là nơi truyền tải nhiều chủ trương và nội dung của các cơ quan quản lý nhà nước về công tác đảm bảo an toàn thông tin, đặc biệt là những vấn đề về định hướng chính sách công nghệ thông tin và an ninh mạng."
+                    desc: "Cuộc thi là nơi truyền tải nhiều chủ trương và kỳ vọng của các cơ quan quản lý nhà nước đến thế hệ sinh viên, đặc biệt là những sinh viên chuyên ngành công nghệ thông tin và an ninh mạng."
                 }
             ]
         },
@@ -115,19 +117,19 @@ export const translations = {
                 {
                     title: "VÒNG CHUNG KHẢO",
                     date: "(15/11/2025)",
-                    desc: `Vòng Chung Khảo chia thành hai bảng:
-Bảng A: Thi đấu tấn công - phòng thủ (attack-defense) trên trung tâm dữ liệu giả lập, với các đội trong nước tập trung tại Hà Nội, còn các đội quốc tế sẽ kết nối thi trực tuyến.
-Bảng B: Thi theo hình thức jeopardy, trong đó tất cả các đội thi online từ xa. Vòng Chung Khảo là nơi các đội thể hiện bản lĩnh, tư duy chiến lược và kỹ năng xử lý tình huống trong môi trường an ninh mạng thực tế.`
+                    desc: `Vòng Chung khảo chia thành hai bảng: 
+Bảng A: Thi đấu tấn công - phòng thủ (attack-defense) trên trung tâm dữ liệu giả lập, với các đội trong nước tập trung tại Hà Nội, còn các đội quốc tế sẽ kết nối thi trực tuyến. 
+Bảng B: Thi theo hình thức jeopardy, trong đó tất cả các đội thi online từ xa. Vòng Chung khảo là nơi các đội thể hiện bản lĩnh, tư duy chiến lược và kỹ năng xử lý tình huống trong môi trường an ninh mạng thực tế.`
                 }
             ]
         },
         // Side Activities
         sideActivities: {
             title: " HOẠT ĐỘNG SONG SONG",
-            subTitle: "Các hoạt động diễn ra song song với Vòng Chung Khảo ngày 15.11.2025",
+            subTitle: "Các hoạt động diễn ra song song với Vòng Chung khảo ngày 15.11.2025",
             activities: [
                 "TỌA ĐÀM HƯỚNG NGHIỆP",
-                "ĐẶT BÀN TRUYỀN THÔNG",
+                "TRIỂN LÃM  CÔNG NGHỆ",
                 "HỘI CHỢ VIỆC LÀM & ĐÀO TẠO",
                 "MINI GAME CÔNG NGHỆ"
             ]
@@ -216,7 +218,8 @@ Bảng B: Thi theo hình thức jeopardy, trong đó tất cả các đội thi 
         // EventIntro
         intro: {
             title: "THE LEADING PRESTIGIOUS CYBERSECURITY COMPETITION FOR STUDENTS",
-            description: "The 2025 Cybersecurity Student Competition is an annual event organized by the National Cybersecurity Association (NCA), sponsored by the Ministry of Public Security and the Ministry of Education and Training, in coordination with the Cybersecurity and High-Tech Crime Prevention Department (A05). The competition is also supported by the Central Committee of the Ho Chi Minh Communist Youth Union and the Vietnam Student Association.",
+            description1: "The 2025 Cybersecurity Student Competition is an annual event organized by the National Cybersecurity Association (NCA), sponsored by the Ministry of Public Security and the Ministry of Education and Training, in coordination with the Cybersecurity and High-Tech Crime Prevention Department (A05). The competition is also supported by the Central Committee of the Ho Chi Minh Communist Youth Union and the Vietnam Student Association.",
+            description2: "The competition aims to raise awareness about information security, spread knowledge of data protection, and build a cybersecurity culture within the student community. At the same time, the program provides opportunities to develop skills, helping contestants gain hands-on experience, develop critical thinking, and foster creativity. Through this, the competition contributes to discovering and nurturing talent, seeking young promising faces for the next generation of cybersecurity experts. Not stopping there, the event also plays a role in connecting the ecosystem between education, business, and the nation, contributing to the development of high-quality cybersecurity human resources, meeting the growing demands of the digital age.",
             objectives: {
                 awareness: {
                     title: "Raise Awareness:",

@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f94ecd6-d754-43cd-9fb3-9a07ca0447ee" name="Changes" comment="Landing page">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/_redirects" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/file/(E)04.10 Agenda CSCV 2025 .pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/file/(Eng) Brochure CSCV 2025 .pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/file/(Vie) Brochure CSCV 2025.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/file/04.10 Chương trình CSCV 2025.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/images/3img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/images/Keyvisual.FN-03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/images/ht.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/images/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/images/logoweb.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/autoprefixer" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/autoprefixer.cmd" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/autoprefixer.ps1" afterDir="false" />
@@ -4203,11 +4215,23 @@
       <change afterPath="$PROJECT_DIR$/node_modules/yallist/iterator.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/yallist/package.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/yallist/yallist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoadingSpinner.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/Banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner_vertical.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner_vertical_en.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-B-lddrIW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/index-BMtXIzBY.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/asset-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EventBanner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EventBanner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EventIntro.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EventIntro.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RegistrationForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistrationForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translations/translations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/translations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -4316,9 +4340,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.preview" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -4360,6 +4384,21 @@
       <workItem from="1759799807517" duration="30000" />
       <workItem from="1759805982731" duration="4613000" />
       <workItem from="1759817707466" duration="6387000" />
+      <workItem from="1759828811064" duration="2615000" />
+      <workItem from="1759905878233" duration="4555000" />
+      <workItem from="1759933230915" duration="1549000" />
+      <workItem from="1759935442918" duration="690000" />
+      <workItem from="1759992715398" duration="2416000" />
+      <workItem from="1760070266866" duration="959000" />
+      <workItem from="1760203154903" duration="1520000" />
+      <workItem from="1760204711121" duration="1311000" />
+      <workItem from="1760318013162" duration="7236000" />
+      <workItem from="1760455092658" duration="127000" />
+      <workItem from="1760520968170" duration="2002000" />
+      <workItem from="1760586674899" duration="1917000" />
+      <workItem from="1760596962411" duration="218000" />
+      <workItem from="1760600703939" duration="1649000" />
+      <workItem from="1760668474433" duration="155000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <option name="closed" value="true" />
@@ -4537,7 +4576,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759763133497</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Landing page">
+      <option name="closed" value="true" />
+      <created>1759828902497</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1759828902497</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
