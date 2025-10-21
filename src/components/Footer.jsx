@@ -31,7 +31,7 @@ const Footer = () => {
                         034 433 4860
                     </p>
                     <a
-                        href="mailto:dai.tran@iecgroup.com.vn?subject=Hợp%20tác%20Tài%20trợ&body=Chào%20anh%20Đại,%0A%0ATôi%20quan%20tâm%20tài%20trợ..."
+                        href="/booth-registration"
                         className="mt-2 inline-block px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-md shadow-lg hover:from-red-700 hover:to-red-800 hover:scale-105 transition-all duration-300 w-fit"
                     >
                         {t.footer.sponsor}
