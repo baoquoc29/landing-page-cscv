@@ -63,6 +63,25 @@ const BoothRegistrationForm = () => {
         const { name, files } = e.target;
         if (files && files[0]) {
             const file = files[0];
+            const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+            
+            // Kiểm tra kích thước file
+            if (file.size > maxSize) {
+                setSubmitStatus({
+                    type: 'error',
+                    message: language === 'VN'
+                        ? `Kích thước file logo vượt quá giới hạn cho phép (5MB). File của bạn: ${(file.size / (1024 * 1024)).toFixed(2)}MB`
+                        : `Logo file size exceeds the limit (5MB). Your file: ${(file.size / (1024 * 1024)).toFixed(2)}MB`
+                });
+                
+                // Reset input file
+                e.target.value = '';
+                
+                // Scroll to top để hiển thị error message
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+            
             setFormData(prev => ({ ...prev, [name]: file }));
             
             // Tạo preview URL cho logo
@@ -73,6 +92,9 @@ const BoothRegistrationForm = () => {
                 };
                 reader.readAsDataURL(file);
             }
+            
+            // Clear any previous error messages
+            setSubmitStatus({ type: '', message: '' });
         }
     };
 
@@ -307,7 +329,7 @@ const BoothRegistrationForm = () => {
                     <div className="bg-gradient-to-r from-dark-900/90 via-dark-800/90 to-dark-900/90 border-2 border-red-500/50 rounded-xl p-6 shadow-xl">
                         <h2 className="text-xl md:text-2xl font-heading font-bold text-red-400 mb-6 flex items-center gap-2">
                             <span className="text-red-500">2.</span>
-                            {language === 'VN' ? 'Thông tin người đại diện' : 'Representative Information'}
+                            {language === 'VN' ? 'Thông tin người liên hệ' : 'Contact Information'}
                         </h2>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -534,8 +556,14 @@ const BoothRegistrationForm = () => {
                                 <label className="block text-gray-200 font-semibold mb-2">
                                     {language === 'VN' ? 'Logo chính thức của đơn vị' : 'Official Organization Logo'} <span className="text-red-500">*</span>
                                 </label>
-                                <p className="text-gray-400 text-sm mb-2">
+                                <p className="text-gray-400 text-sm mb-1">
                                     {language === 'VN' ? '(Định dạng .PNG hoặc .AI, nền trong suốt nếu có)' : '(Format: .PNG or .AI, transparent background if available)'}
+                                </p>
+                                <p className="text-yellow-400 text-xs mb-2 flex items-center gap-1">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                    </svg>
+                                    {language === 'VN' ? 'Kích thước file tối đa: 5MB' : 'Maximum file size: 5MB'}
                                 </p>
                                 
                                 {/* Preview Image */}
