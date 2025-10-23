@@ -84,7 +84,7 @@ const BoothRegistrationForm = () => {
             
             setFormData(prev => ({ ...prev, [name]: file }));
             
-            // Tạo preview URL cho logo
+            // Tạo preview URL cho logos
             if (name === 'logoFile') {
                 const reader = new FileReader();
                 reader.onloadend = () => {
@@ -159,7 +159,7 @@ const BoothRegistrationForm = () => {
                 formDataToSend.append('boothActivities', activity);
             });
             
-            // Thêm file logo nếu có
+            // Thêm file logos nếu có
             if (formData.logoFile) {
                 formDataToSend.append('logoFile', formData.logoFile);
             }
@@ -206,7 +206,7 @@ const BoothRegistrationForm = () => {
                     confirmMediaUsage: false
                 });
                 
-                // Reset logo preview
+                // Reset logos preview
                 setLogoPreview(null);
                 
                 // Scroll to top để hiển thị success message
@@ -608,7 +608,7 @@ const BoothRegistrationForm = () => {
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                                             </svg>
-                                            {language === 'VN' ? 'Thay đổi logo' : 'Change logo'}
+                                            {language === 'VN' ? 'Thay đổi logos' : 'Change logos'}
                                             <input
                                                 type="file"
                                                 name="logoFile"
@@ -674,7 +674,7 @@ const BoothRegistrationForm = () => {
                                 />
                                 <span className="text-gray-200 group-hover:text-white transition-colors">
                                     {language === 'VN'
-                                        ? 'Đơn vị đồng ý để Ban Tổ chức sử dụng hình ảnh, logo, thông tin gian hàng cho mục đích truyền thông của Cuộc thi Sinh viên An ninh mạng 2025.'
+                                        ? 'Đơn vị đồng ý để Ban Tổ chức sử dụng hình ảnh, logos, thông tin gian hàng cho mục đích truyền thông của Cuộc thi Sinh viên An ninh mạng 2025.'
                                         : 'The organization agrees to allow the Organizing Committee to use images, logos, and booth information for communication purposes of the Cybersecurity Student Competition 2025.'}
                                     <span className="text-red-500 ml-1">*</span>
                                 </span>

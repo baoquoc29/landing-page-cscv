@@ -86,4 +86,18 @@
 .animate-box-glow {
   animation: box-glow 3s infinite alternate;
 }
+@keyframes sponsorMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-sponsor-marquee {
+  animation: sponsorMarquee 40s linear infinite;
+  display: inline-flex;
+  will-change: transform;
+}
 
