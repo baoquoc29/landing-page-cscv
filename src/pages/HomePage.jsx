@@ -8,6 +8,8 @@ import MainActivities from "../components/MainActivities.jsx";
 import SideActivities from "../components/SideActivities.jsx";
 import SponsorsSection from "../components/SponsorsSection.jsx";
 import TrackSponsors from "../components/TrackSponsors.jsx";
+import NewPaper from "../components/NewPaper.jsx";
+import ContestImagesSection from "../components/ContestImagesSection.jsx";
 
 function HomePage() {
     return (
@@ -20,7 +22,9 @@ function HomePage() {
             <ParticipantsAndActivities />
             <MainActivities />
             <SideActivities />
+            <NewPaper></NewPaper>
             <SponsorsSection></SponsorsSection>
+            <ContestImagesSection></ContestImagesSection>
         </>
     );
 }

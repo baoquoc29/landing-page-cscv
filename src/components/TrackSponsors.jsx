@@ -14,6 +14,7 @@ const tiers = {
                 { src: "/logos/cmc.png", alt: "CMC" },
                 { src: "/logos/netnam.png", alt: "NETNAM" },
                 { src: "/logos/mobifone.png", alt: "MOBIFONE" },
+                { src: "/logos/verichans.png", alt: "verichans" },
             ],
         },
     ],
@@ -51,7 +52,7 @@ const LogoCard = ({ src, alt }) => {
                         ? "transform scale-[1.2]"
                         : isCmc
                             ? "transform scale-[1.4]"
-                            : "transform scale-100"
+                            : "transform scale-90"
                 }`}
             />
         </div>

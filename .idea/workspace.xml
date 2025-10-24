@@ -5,20 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f94ecd6-d754-43cd-9fb3-9a07ca0447ee" name="Changes" comment="Landing page">
-      <change afterPath="$PROJECT_DIR$/public/logos/cmc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logos/mobifone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logos/netnam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logos/salework.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logos/singalarity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logos/vsec.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logos/weedvina.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SponsorsSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TrackSponsors.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld7.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ld9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/abp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/phip.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/verichans.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContestImagesSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewPaper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist.zip" beforeDir="false" afterPath="$PROJECT_DIR$/dist.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BoothRegistrationForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BoothRegistrationForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SponsorsSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SponsorsSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TrackSponsors.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrackSponsors.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
     </list>
@@ -73,7 +82,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Landing Page",
+    "last_opened_file_path": "D:/CSCV/landing-page-cscv/public/logos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,8 +98,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CSCV\landing-page-cscv\public\logos" />
-      <recent name="D:\CSCV\landing-page-cscv\public\logo" />
       <recent name="D:\CSCV\landing-page-cscv\public\images" />
+      <recent name="D:\CSCV\landing-page-cscv\public\logo" />
       <recent name="D:\CSCV\landing-page-cscv\public\file" />
       <recent name="D:\CSCV\landing-page-cscv\public\fonts" />
     </key>
@@ -197,7 +206,10 @@
       <workItem from="1761042700099" duration="42000" />
       <workItem from="1761125464179" duration="1909000" />
       <workItem from="1761182976315" duration="1019000" />
-      <workItem from="1761201316457" duration="3572000" />
+      <workItem from="1761201316457" duration="4623000" />
+      <workItem from="1761211958719" duration="318000" />
+      <workItem from="1761312039157" duration="2105000" />
+      <workItem from="1761321363895" duration="6177000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <option name="closed" value="true" />
@@ -407,7 +419,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761042733207</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Landing page">
+      <option name="closed" value="true" />
+      <created>1761204965068</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1761204965068</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
